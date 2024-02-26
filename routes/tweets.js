@@ -22,6 +22,7 @@ router.post('/', (req, res) => {
       content: req.body.content,
       createdAt: new Date(),
     });
+    
 
     newTweet.save().then(newDoc => {
       res.json({ result: true, tweet: newDoc });
